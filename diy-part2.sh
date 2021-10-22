@@ -10,5 +10,12 @@
 # Description: OpenWrt DIY script part 2 (After Update feeds)
 #
 
+diy-part2.sh
 # Modify default IP
-#sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.5.1/g' package/base-files/files/bin/config_generate
+
+# 全能推送
+git clone https://github.com/zzsj0928/luci-app-pushbot package/luci-app-pushbot
+
+# 增加关机插件
+git clone https://github.com/esirplayground/luci-app-poweroff.git package/lean/luci-app-poweroff
